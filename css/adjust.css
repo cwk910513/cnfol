@@ -162,12 +162,12 @@
 .1qrcode_wrap { background-color: #5a5a64; }
 #scrollBox{height: 300px;width:360px;margin: 50px auto;overflow:hidden;}
 #scrollBox #con1,#con2{width: 100%;float:left;}
-#scrollBox ul li{ height: 50px; line-height: 50px; text-align: left; color: #9291a1; font-size: 15px; }
+#scrollBox ul li{ height: 50px; line-height: 50px; text-align: left; color: #f6f6f6; font-size: 15px; }
 #scrollBox li span.line-image { float: left; width: 25px; height: 49px; margin-left: 40px; content: ""; color: #fff; font-size: 20px; border-left: 1px dotted #dedede; left: 40px; z-index: 0; }
 #scrollBox li span.line-image img { width: 70%; margin-top: -12px; margin-left: -9px; }
 #scrollBox li span.line-image span { width: 14px; height: 14px; border-radius: 8px; border: 1px solid red; background-color: red; display: inline-block; margin-left: -8px; }
 #scrollBox li span.current-staus { float: left; width: 48px; margin: 0px 10px; text-align: center; color: red; }
-#scrollBox li:hover { background-color: #38383e; cursor: pointer; }
+#scrollBox li:hover { background-color: #0e0c0b; cursor: pointer; background-color:rgba(0,0,0,0.5) }
 .c-check-box { height: 50px; background-color: #333; }
 .c-check-box div { height: 50px;margin-left: 8px; }
 .c-check-box span { width: 150px;height: 100%;color: white; font-size: 24px; display: inline-block; line-height: 50px; text-align: center;cursor: pointer; margin-left: -8px; }

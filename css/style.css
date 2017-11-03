@@ -56,13 +56,12 @@
 		.navBar a{color:#333;}
 
 		/*广告、宣传*/
-		.advInfo{position:relative;height: 400px;background-size:cover;background-color: #9291a1;}
+		.advInfo{position:relative;height: 400px;background: url(http://hsnew.cnfol.com/pc/Imgs/CaiShi/New/bg-banner.png) left top no-repeat;background-size:cover;}
 		.slogan { font-size: 50px; padding-top: 150px; width: 50%; color: white; float: left; }
-		.advInfo_brand{position:absolute;left: 380px;top: 90px;}
+		.advInfo_brand {position:absolute;left: 0px;top: 175px;}
 		.qrcode_wrap {position:absolute;right:0;height: 400px; line-height: 360px; background: rgba(0,0,0,.5); width: 360px;text-align: center;}
 		.qrcode_wrap img{width:250px;}
 		/*菜单*/
-		.c-menu{}
 		.c-menu_inner{padding-top:18px;padding-bottom: 18px;}
 		.c-menu_item-active{background: url(http://hsnew.cnfol.com/pc/Imgs/CaiShi/New/menubg.png) left top no-repeat;background-size: 100% 41px;color: #fff;padding-left: 30px;padding-right: 30px;
 		        line-height: 40px;}
