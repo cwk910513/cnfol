@@ -127,15 +127,14 @@
             }
         },
         mounted () {
-            console.log('/asd.com')
-            console.log('123')
-            http.get('api/getTestDetails').then(response => {
-                console.log('11111111111')
-                console.log(response)
-            }).catch(error => {
-                console.log('22222222222')
-                console.log(error)
-            })
+            console.log(ActionUrl.login.login.url)
+            // http.get('api/getTestDetails').then(response => {
+            //     console.log('11111111111')
+            //     console.log(response)
+            // }).catch(error => {
+            //     console.log('22222222222')
+            //     console.log(error)
+            // })
         },
         methods: {
             // 登录
@@ -153,13 +152,13 @@
                     'userBean.user.username': self.user,
                     'userBean.user.password': self.pwd
                 };
-                const { data } = await http.post(ActionUrl.login.login.url, params);
-                if(data.rCode === '0') {
-                    sessionStorage.setItem('loginAuth', data.cookieValue);
-                    self.$router.push({ path: '/dashboard' });
-                } else {
-                    self.$message.warning('登录失败，请输入正确的用户名和密码！');
-                }
+                // const { data } = await http.post(ActionUrl.login.login.url, params);
+                // if(data.rCode === '0') {
+                //     sessionStorage.setItem('loginAuth', data.cookieValue);
+                //     self.$router.push({ path: '/dashboard' });
+                // } else {
+                //     self.$message.warning('登录失败，请输入正确的用户名和密码！');
+                // }
             },
             // 忘记密码
             forgetPwdFun() {
@@ -225,20 +224,20 @@
                     async (err, values) => {
                         if (!err) {
                             self.okBtnLoading = true;
-                            const { data } = await http.post(ActionUrl.login.register.url, { 
-                                username: values.regUser, 
-                                password: values.regPwd,
-                                phone: values.regPhone,
-                                email: values.regEmail
-                            });
-                            if(data.status === 'success') {
-                                self.$message.success(data.message);
-                                self.regeristerModel = false;
-                                self.okBtnLoading = false;
-                            } else {
-                                self.$message.warning('注册失败，请联系管理员chuwk@xxx.com！');
-                                self.okBtnLoading = false;
-                            }
+                            // const { data } = await http.post(ActionUrl.login.register.url, { 
+                            //     username: values.regUser, 
+                            //     password: values.regPwd,
+                            //     phone: values.regPhone,
+                            //     email: values.regEmail
+                            // });
+                            // if(data.status === 'success') {
+                            //     self.$message.success(data.message);
+                            //     self.regeristerModel = false;
+                            //     self.okBtnLoading = false;
+                            // } else {
+                            //     self.$message.warning('注册失败，请联系管理员chuwk@xxx.com！');
+                            //     self.okBtnLoading = false;
+                            // }
                         }
                     },
                 )

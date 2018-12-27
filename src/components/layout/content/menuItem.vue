@@ -15,9 +15,6 @@
 </template>
 
 <script>
-import ActionUrl from '../../../assets/js/action.url.js';
-import http from '../../../assets/js/http.js';
-
 export default {
     data() {
         return {
@@ -35,18 +32,7 @@ export default {
             self.gotoUrl('home', '首页');
         }
     },
-    mounted() {
-        this.getCatalog();
-    },
     methods: {
-        // 获取目录
-        getCatalog() {
-            http.post(ActionUrl.home.getCatalog.url).then((response) => {
-                this.catalogItemList = response.data.data[0].zlist;
-            }).catch((error) => {
-                self.$message.warning('获取目录数据失败，请重试！');
-            });
-        },
         gotoUrl(type, title) {
             let self = this;
             self.path = type === 'home' ? '/dashboard/' : '/dashboard/'+ type; 

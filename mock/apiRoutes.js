@@ -1,14 +1,14 @@
 let apiRoutes = {
     beforeFun: (app) => {
-        app.all('/api/getTestInfo', (req, res) => {
+        app.all('/api/chuwk/login', (req, res) => {
             res.json({
-                cookieName: "sessionid",
-                cookieValue: "6b820f00-2426-47c3-abfd-3c1f27c1d53d",
-                msg: "0987654321操作成功！1234567890",
-                rCode: "0",
-                realName: "admin",
-                userId: "1",
-                userName: "admin"
+                code: '0',
+                msg: '操作成功！',
+                data: {
+                    cookieValue: '6b820f00-2426-47c3-abfd-3c1f27c1d53d',
+                    userId: '1',
+                    userName: 'admin'
+                }
             })
         }),
         app.all('/api/getTestDetails', (req, res) => {

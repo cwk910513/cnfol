@@ -13,7 +13,7 @@
     "dev": "npm-run-all --parallel gulp-server",
     "start": "npm run webpack-dev-conf",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run e2e",
+    "test": "node build/test.js",
     "build": "node build/build.js"
   },
   "dependencies": {

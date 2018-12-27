@@ -1,7 +1,8 @@
 'use strict'
-const merge = require('webpack-merge')
-const devEnv = require('./dev.env')
 
-module.exports = merge(devEnv, {
-  NODE_ENV: '"testing"'
-})
+// 测试环境（本地调试完成以后，发布的测试环境）
+module.exports = {
+  NODE_ENV: '"testing"',
+  API_ROOT: '"127.0.0.1:80801"'
+}
+

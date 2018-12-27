@@ -9,15 +9,6 @@ import login from '@/components/login/login';
 import dashboard from '@/components/layout/dashboard';
 // 欢迎首页
 import home from '@/components/home';
-// ssp模块
-import dspPriority from '@/components/ssp/dspPriority';
-import mediaReview from '@/components/ssp/mediaReview';
-import appReview from '@/components/ssp/appReview';
-import mediaManage from '@/components/ssp/mediaManage';
-import appManage from '@/components/ssp/appManage';
-import adPositionManage from '@/components/ssp/adPositionManage';
-import tagManage from '@/components/ssp/tagManage';
-import adPositionShare from '@/components/ssp/adPositionShare';
 
 Vue.use(Router)
 
@@ -45,70 +36,6 @@ let router = new Router({
                         requireAuth: true,
                     },
                     component: home
-                },
-                {
-                    path: '/dashboard/SspDspPriority',
-                    title: 'DSP优先级配置',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: dspPriority
-                },
-                {
-                    path: '/dashboard/SspMediaReview',
-                    title: '媒体主审核',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: mediaReview
-                },
-                {
-                    path: '/dashboard/SspAppReview',
-                    title: '应用审核',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: appReview
-                },
-                {
-                    path: '/dashboard/SspMediaManage',
-                    title: '媒体主管理',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: mediaManage
-                },
-                {
-                    path: '/dashboard/SspAppManage',
-                    title: '应用管理',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: appManage
-                },
-                {
-                    path: '/dashboard/SspAdpositionManage',
-                    title: '广告位管理',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: adPositionManage
-                },
-                {
-                    path: '/dashboard/SspTagManage',
-                    title: '标签管理',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: tagManage
-                },
-                {
-                    path: '/dashboard/SspAdpositionShare',
-                    title: '广告位分成管理',
-                    meta: {
-                        requireAuth: true
-                    },
-                    component: adPositionShare
                 }
             ]
         }

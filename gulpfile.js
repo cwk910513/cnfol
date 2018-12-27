@@ -10,7 +10,7 @@ gulp.task('node', function() {
   nodemon({
     // script: '',
     ext: 'js',
-    enc: {
+    env: {
       'NODE_ENV': 'development'
     }
   })
