@@ -1,0 +1,30 @@
+@import '../../assets/scss/common.scss';
+
+div.login-content {
+    background-image: url("../../assets/img/login-bg.svg");
+    background-color: $bg-color;
+    height: 100vh;
+    text-align: center;
+    & > .text-info {
+        padding-top: 25vh;
+        font-weight: bold;
+        font-size: 30px;
+        color: black;
+    }
+    .forget {
+        float: left;
+        color: $active-color;
+        cursor: pointer;
+    }
+    .register {
+        float: right;
+        color: $active-color;
+        cursor: pointer;
+    }
+    .login-btn {
+        width: 100%;
+    }
+    .bottom-info {
+        padding-top: 15vh;
+    }
+}

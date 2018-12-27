@@ -1,0 +1,31 @@
+@import '../../assets/scss/common.scss';
+
+.dashboard-content {
+    height: 100vh;
+    .logo {
+        background: rgba(255,255,255,.2);
+        margin: 16px;
+        height: 32px;
+        line-height: 32px;
+        color: white;
+        text-align: center;
+    }
+    .layout-content {
+        margin: 24px 16px;
+        padding: 24px;
+        background: #fff;
+        min-height: 280px;
+    }
+    .tabs-div {
+        width: 100%;
+        .tabs-content {
+            margin: 15px;
+            background-color: white;
+            .tab-item {
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
