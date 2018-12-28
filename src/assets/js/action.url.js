@@ -3,7 +3,7 @@ let ActionUrl = {
     login: {
         login: {
             url: 'api/chuwk/login',
-            type: 'get'
+            type: 'GET'
         }
     }
 };

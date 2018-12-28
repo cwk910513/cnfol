@@ -106,7 +106,6 @@
 <script>
     import utility from '../../assets/js/utility.js';
     import ActionUrl from '../../assets/js/action.url.js';
-    import http from '../../assets/js/http.js';
 
     // 表单中每一行的布局
     const formItemLayout = {
@@ -126,19 +125,9 @@
                 okBtnLoading   : false   // modal确定按钮loading
             }
         },
-        mounted () {
-            console.log(ActionUrl.login.login.url)
-            // http.get('api/getTestDetails').then(response => {
-            //     console.log('11111111111')
-            //     console.log(response)
-            // }).catch(error => {
-            //     console.log('22222222222')
-            //     console.log(error)
-            // })
-        },
         methods: {
             // 登录
-            async loginFun() {
+            loginFun() {
                 let self = this;
                 if(!self.user) {
                     self.$message.warning('用户名不能为空，请输入！');
@@ -148,17 +137,12 @@
                     self.$message.warning('密码不能为空，请输入！');
                     return false;
                 }
-                let params = {
-                    'userBean.user.username': self.user,
-                    'userBean.user.password': self.pwd
-                };
-                // const { data } = await http.post(ActionUrl.login.login.url, params);
-                // if(data.rCode === '0') {
-                //     sessionStorage.setItem('loginAuth', data.cookieValue);
-                //     self.$router.push({ path: '/dashboard' });
-                // } else {
-                //     self.$message.warning('登录失败，请输入正确的用户名和密码！');
-                // }
+                this.$apiAxios(ActionUrl.login.login.type, ActionUrl.login.login.url, null).then(data => {
+                    sessionStorage.setItem('loginAuth', data.cookieValue);
+                    self.$router.push({ path: '/dashboard' });
+                }).catch(result => {
+                    this.$message.error(result.msg);
+                })
             },
             // 忘记密码
             forgetPwdFun() {
